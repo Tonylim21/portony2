@@ -1,11 +1,16 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiBriefcase } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number>(2026);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="relative border-t border-white/50 bg-white/20 backdrop-blur-md pt-12 pb-8">
@@ -21,7 +26,7 @@ export default function Footer() {
           Membangun antarmuka modern yang indah dan arsitektur backend yang kokoh.
         </p>
 
-        {/* SOSIAL MEDIA */}
+        {/* SOSIAL MEDIA ICON MINIMALIS */}
         <div className="flex items-center gap-5 flex-wrap justify-center">
           <a href="https://github.com/Tonylim21" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-600 transition-colors" title="GitHub">
             <FiGithub className="w-5 h-5" />
@@ -32,7 +37,7 @@ export default function Footer() {
           <a href="https://id.jobstreet.com/id/profiles/antony-salim-v3tr0p5ydq" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-600 transition-colors" title="JobStreet">
             <FiBriefcase className="w-5 h-5" />
           </a>
-          <a href="https://www.instagram.com/tonylim._/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-600 transition-colors" title="Instagram">
+          <a href="https://instagram.com/tonylim._/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-600 transition-colors" title="Instagram">
             <FiInstagram className="w-5 h-5" />
           </a>
           <a href="https://wa.me/6281295410338" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-emerald-500 transition-colors" title="WhatsApp">
