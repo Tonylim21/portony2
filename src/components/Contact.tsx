@@ -21,7 +21,7 @@ export default function Contact() {
 
           {/* INFORMASI KONTAK */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <a 
+            {/* <a 
               href="mailto:antonysalim123@gmail.com" 
               className="flex items-center gap-3 text-slate-700 bg-white/60 px-5 py-3 rounded-2xl border border-white/90 shadow-sm hover:bg-white hover:text-pink-600 transition-all hover:-translate-y-1"
             >
@@ -37,7 +37,7 @@ export default function Contact() {
             >
               <FaWhatsapp className="w-5 h-5 text-emerald-500" />
               <span className="font-semibold">WhatsApp Saya</span>
-            </a>
+            </a> */}
 
             <div className="flex items-center gap-3 text-slate-700 bg-white/60 px-5 py-3 rounded-2xl border border-white/90 shadow-sm cursor-default">
               <FiMapPin className="w-5 h-5 text-indigo-500" />
